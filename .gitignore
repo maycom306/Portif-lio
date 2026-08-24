@@ -1,0 +1,70 @@
+﻿# ─── Sistema Operacional ───────────────────────────────────────────────────────
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+.nfs*
+
+# ─── Editores e IDEs ──────────────────────────────────────────────────────────
+# VSCode
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# JetBrains
+.idea/
+*.iml
+*.iws
+
+# Vim/Neovim
+*.swp
+*.swo
+*.swn
+
+# ─── Node.js (caso seja adicionado futuramente) ───────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.npm
+.yarn/
+
+# ─── Ambiente e Segredos ──────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+*.env
+
+# ─── Logs ─────────────────────────────────────────────────────────────────────
+logs/
+*.log
+
+# ─── Build / Cache ────────────────────────────────────────────────────────────
+dist/
+build/
+.cache/
+.parcel-cache/
+.vercel/
+
+# ─── Temporários ──────────────────────────────────────────────────────────────
+tmp/
+temp/
+*.tmp
+*.bak
+*.orig

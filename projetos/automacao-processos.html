@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projeto de Automação de Planilhas - Sincronização de Cargos Comissionados">
+    <title>Automação de Processos | Michael Cachina</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/image-removebg-preview.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="projeto-detalhe.css">
+</head>
+<body>
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo" style="font-weight: 800; font-size: 1.2rem; color: var(--accent-color);">
+                Michael Cachina
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html#home">Início</a>
+                <a href="../index.html#about">Sobre</a>
+                <a href="../index.html#projects">Projetos</a>
+                <a href="../index.html#contact">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="project-detail-hero">
+            <div class="project-detail-container fade-in">
+                <a href="../index.html#projects" class="back-link">← Voltar aos Projetos</a>
+                <div class="project-badge">Automação</div>
+                <h1 class="project-detail-title">Automação de Processos</h1>
+                <p class="project-detail-subtitle">Sincronização automática de cargos comissionados entre sistema Agili e Google Sheets</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-container slide-up">
+                <div class="detail-grid">
+                    <!-- Sobre o Projeto -->
+                    <div class="detail-card detail-card-wide">
+                        <div class="detail-card-header">
+                            <span class="detail-icon">📖</span>
+                            <h2>Sobre o Projeto</h2>
+                        </div>
+                        <p>Sistema em Python desenvolvido para a <strong>Prefeitura</strong> que automatiza a sincronização de dados de cargos comissionados. O sistema lê dados exportados do sistema Agili (em formato CSV) e atualiza automaticamente a planilha de controle no Google Sheets.</p>
+                        <p>O robô cruza matrículas antigas com as novas, identifica quem foi exonerado, quem é novo e atualiza a planilha de forma inteligente — eliminando o trabalho manual repetitivo e propenso a erros.</p>
+                    </div>
+
+                    <!-- Problema -->
+                    <div class="detail-card">
+                        <div class="detail-card-header">
+                            <span class="detail-icon">🎯</span>
+                            <h2>O Problema</h2>
+                        </div>
+                        <p>O setor de RH da Prefeitura precisava atualizar manualmente uma planilha de cargos comissionados todo mês, cruzando dados de centenas de servidores entre o sistema Agili e o Google Sheets. Processo demorado, repetitivo e sujeito a erros humanos.</p>
+                    </div>
+
+                    <!-- Solução -->
+                    <div class="detail-card">
+                        <div class="detail-card-header">
+                            <span class="detail-icon">💡</span>
+                            <h2>A Solução</h2>
+                        </div>
+                        <p>Uma automação em Python que, com um único comando, lê os CSVs exportados do Agili, cruza as matrículas com a planilha atual, descobre quem saiu e quem entrou, e atualiza tudo automaticamente no Google Sheets usando a API oficial.</p>
+                    </div>
+
+                    <!-- Arquitetura -->
+                    <div class="detail-card detail-card-wide">
+                        <div class="detail-card-header">
+                            <span class="detail-icon">🏗️</span>
+                            <h2>Arquitetura do Sistema</h2>
+                        </div>
+                        <div class="architecture-grid">
+                            <div class="arch-item">
+                                <h3>⚙️ config.py</h3>
+                                <p><strong>O Cérebro das Constantes</strong> — Centraliza caminhos, IDs da planilha, mapeamento de colunas do CSV ("Text12" → "nome") e constantes como "EM ABERTO" para vagas livres.</p>
+                            </div>
+                            <div class="arch-item">
+                                <h3>🚀 main.py</h3>
+                                <p><strong>O Maestro</strong> — Ponto de entrada que orquestra todo o fluxo: autentica no Google, lê CSVs, cruza dados e dispara as atualizações na planilha.</p>
+                            </div>
+                            <div class="arch-item">
+                                <h3>📄 csv_service.py</h3>
+                                <p><strong>Leitor de Dados</strong> — Importa e normaliza os CSVs do Agili, lidando com encodings e separadores diferentes automaticamente.</p>
+                            </div>
+                            <div class="arch-item">
+                                <h3>📊 sheets_service.py</h3>
+                                <p><strong>Conector Google</strong> — Gerencia autenticação via conta de serviço e executa leituras/escritas na planilha com batch updates.</p>
+                            </div>
+                            <div class="arch-item">
+                                <h3>🔄 transform_service.py</h3>
+                                <p><strong>Inteligência de Cruzamento</strong> — Compara matrículas antigas e novas, gerando listas de inserção, remoção e atualização.</p>
+                            </div>
+                            <div class="arch-item">
+                                <h3>📝 utils/</h3>
+                                <p><strong>Utilitários</strong> — Funções auxiliares de logging, validação de dados e formatação de saídas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tecnologias -->
+                    <div class="detail-card">
+                        <div class="detail-card-header">
+                            <span class="detail-icon">🛠️</span>
+                            <h2>Tecnologias Utilizadas</h2>
+                        </div>
+                        <div class="tech-list">
+                            <div class="tech-item">
+                                <span class="tech-name">Python</span>
+                                <span class="tech-desc">Linguagem principal da automação</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name">Pandas</span>
+                                <span class="tech-desc">Leitura de CSVs, cruzamento e filtragem de dados</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name">gspread</span>
+                                <span class="tech-desc">Comunicação simplificada com Google Sheets API</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name">google-auth</span>
+                                <span class="tech-desc">Autenticação segura via conta de serviço</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name">Google Sheets API</span>
+                                <span class="tech-desc">Atualização em lote (batch) da planilha</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fluxo do Projeto -->
+                    <div class="detail-card">
+                        <div class="detail-card-header">
+                            <span class="detail-icon">⚙️</span>
+                            <h2>Fluxo de Execução</h2>
+                        </div>
+                        <div class="flow-steps">
+                            <div class="flow-step">
+                                <span class="flow-number">1</span>
+                                <div>
+                                    <strong>Autenticação</strong>
+                                    <p>Conexão segura com Google Sheets via conta de serviço</p>
+                                </div>
+                            </div>
+                            <div class="flow-step">
+                                <span class="flow-number">2</span>
+                                <div>
+                                    <strong>Leitura de CSVs</strong>
+                                    <p>Importação e normalização dos arquivos exportados do Agili</p>
+                                </div>
+                            </div>
+                            <div class="flow-step">
+                                <span class="flow-number">3</span>
+                                <div>
+                                    <strong>Cruzamento de Dados</strong>
+                                    <p>Comparação de matrículas para identificar entradas e saídas</p>
+                                </div>
+                            </div>
+                            <div class="flow-step">
+                                <span class="flow-number">4</span>
+                                <div>
+                                    <strong>Atualização em Lote</strong>
+                                    <p>Batch update na planilha do Google Sheets com as alterações</p>
+                                </div>
+                            </div>
+                            <div class="flow-step">
+                                <span class="flow-number">5</span>
+                                <div>
+                                    <strong>Log e Relatório</strong>
+                                    <p>Registro de todas as alterações realizadas para auditoria</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="detail-card detail-card-wide detail-cta">
+                        <h2>Quer ver o código completo?</h2>
+                        <p>Acesse o repositório no GitHub para explorar toda a arquitetura, módulos e documentação do projeto.</p>
+                        <div class="detail-actions">
+                            <a href="https://github.com/maycom306/Automa-o_Planilha" target="_blank" class="btn btn-primary">Ver no GitHub</a>
+                            <a href="../index.html#projects" class="btn btn-secondary">Outros Projetos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Michael Cachina. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+</html>

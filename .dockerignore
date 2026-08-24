@@ -1,0 +1,16 @@
+﻿# Git
+.git
+.gitignore
+
+# Documentação
+README.md
+
+# Arquivos de configuração do Docker (não precisam ir para dentro da imagem)
+Dockerfile
+docker-compose.yml
+nginx.conf
+
+# Arquivos de sistema
+Thumbs.db
+.DS_Store
+*.log

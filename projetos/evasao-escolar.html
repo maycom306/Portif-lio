@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projeto de TCC - Análise de Evasão Escolar com Machine Learning">
+    <title>Análise de Evasão Escolar | Michael Cachina</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/image-removebg-preview.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="projeto-detalhe.css">
+</head>
+
+<body>
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo"
+                style="font-weight: 800; font-size: 1.2rem; color: var(--accent-color);">
+                Michael Cachina
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html#home">Início</a>
+                <a href="../index.html#about">Sobre</a>
+                <a href="../index.html#projects">Projetos</a>
+                <a href="../index.html#contact">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="project-detail-hero">
+            <div class="project-detail-container fade-in">
+                <a href="../index.html#projects" class="back-link">← Voltar aos Projetos</a>
+                <div class="project-badge">Machine Learning</div>
+                <h1 class="project-detail-title">Análise de Evasão Escolar</h1>
+                <p class="project-detail-subtitle">Trabalho de Conclusão de Curso — Predição de evasão escolar
+                    utilizando Machine Learning</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-container slide-up">
+                <div class="detail-grid">
+                    <!-- Sobre o Projeto -->
+                    <div class="detail-card detail-card-wide">
+                        <div class="detail-card-header">
+                            <span class="detail-icon">📖</span>
+                            <h2>Sobre o Projeto</h2>
+                        </div>
+                        <p>Este projeto de TCC (Trabalho de Conclusão de Curso) foi desenvolvido como parte da minha
+                            formação em Licenciatura em Informática pelo IFRN. O objetivo principal foi criar um modelo
+                            preditivo capaz de identificar alunos com alta probabilidade de evasão escolar, permitindo
+                            que a instituição tome medidas preventivas.</p>
+                        <p>Utilizando técnicas de <strong>Ciência de Dados</strong> e <strong>Machine Learning</strong>,
+                            o sistema analisa dados acadêmicos e socioeconômicos dos estudantes para gerar previsões com
+                            alta acurácia sobre quais alunos estão em risco de abandonar o curso.</p>
+                    </div>
+
+                    <!-- Problema -->
+                    <div class="detail-card">
+                        <div class="detail-card-header">
+                            <span class="detail-icon">🎯</span>
+                            <h2>O Problema</h2>
+                        </div>
+                        <p>A evasão escolar é um dos maiores desafios enfrentados por instituições de ensino no Brasil.
+                            Identificar precocemente os alunos em risco de evasão permite ações preventivas, como
+                            tutoria personalizada, assistência financeira ou acompanhamento psicopedagógico.</p>
+                    </div>
+
+                    <!-- Solução -->
+                    <div class="detail-card">
+                        <div class="detail-card-header">
+                            <span class="detail-icon">💡</span>
+                            <h2>A Solução</h2>
+                        </div>
+                        <p>Um sistema baseado em algoritmos de Machine Learning que recebe dados históricos de alunos e
+                            retorna uma probabilidade de evasão. O modelo foi treinado com dados reais, limpados e
+                            pré-processados com Pandas e avaliados usando métricas como acurácia, precisão e recall.</p>
+                    </div>
+
+                    <!-- Tecnologias -->
+                    <div class="detail-card">
+                        <div class="detail-card-header">
+                            <span class="detail-icon">🛠️</span>
+                            <h2>Tecnologias Utilizadas</h2>
+                        </div>
+                        <div class="tech-list">
+                            <div class="tech-item">
+                                <span class="tech-name">Python</span>
+                                <span class="tech-desc">Linguagem principal do projeto</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name">Pandas</span>
+                                <span class="tech-desc">Manipulação e análise de dados</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name">Scikit-Learn</span>
+                                <span class="tech-desc">Modelagem e treinamento dos algoritmos de ML</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name">Matplotlib / Seaborn</span>
+                                <span class="tech-desc">Visualização de dados e gráficos</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name">Jupyter Notebook</span>
+                                <span class="tech-desc">Ambiente de experimentação interativa</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Fluxo do Projeto -->
+                    <div class="detail-card">
+                        <div class="detail-card-header">
+                            <span class="detail-icon">⚙️</span>
+                            <h2>Fluxo do Projeto</h2>
+                        </div>
+                        <div class="flow-steps">
+                            <div class="flow-step">
+                                <span class="flow-number">1</span>
+                                <div>
+                                    <strong>Coleta de Dados</strong>
+                                    <p>Extração de dados acadêmicos e socioeconômicos dos alunos do IFRN</p>
+                                </div>
+                            </div>
+                            <div class="flow-step">
+                                <span class="flow-number">2</span>
+                                <div>
+                                    <strong>Pré-processamento</strong>
+                                    <p>Limpeza, normalização e tratamento de dados ausentes com Pandas</p>
+                                </div>
+                            </div>
+                            <div class="flow-step">
+                                <span class="flow-number">3</span>
+                                <div>
+                                    <strong>Análise Exploratória</strong>
+                                    <p>Visualização de padrões e correlações nos dados</p>
+                                </div>
+                            </div>
+                            <div class="flow-step">
+                                <span class="flow-number">4</span>
+                                <div>
+                                    <strong>Treinamento do Modelo</strong>
+                                    <p>Seleção e treinamento de algoritmos com Scikit-Learn</p>
+                                </div>
+                            </div>
+                            <div class="flow-step">
+                                <span class="flow-number">5</span>
+                                <div>
+                                    <strong>Avaliação e Resultados</strong>
+                                    <p>Métricas de desempenho (acurácia, precisão, recall, F1-score)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="detail-card detail-card-wide detail-cta">
+                        <h2>Quer ver o código completo?</h2>
+                        <p>Acesse o repositório no GitHub para explorar todo o código-fonte, notebooks e dados do
+                            projeto.</p>
+                        <div class="detail-actions">
+                            <a href="https://github.com/maycom306/TCC_evas-o" target="_blank"
+                                class="btn btn-primary">Ver no GitHub</a>
+                            <a href="../index.html#projects" class="btn btn-secondary">Outros Projetos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Michael Cachina. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+
+</html>

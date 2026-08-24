@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Projeto Go Opportunities - API de Vagas de Emprego em Go">
+    <title>Go Opportunities | Michael Cachina</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../assets/image-removebg-preview.png">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="projeto-detalhe.css">
+</head>
+<body>
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo" style="font-weight: 800; font-size: 1.2rem; color: var(--accent-color);">
+                Michael Cachina
+            </a>
+            <nav class="nav-links">
+                <a href="../index.html#home">Início</a>
+                <a href="../index.html#about">Sobre</a>
+                <a href="../index.html#projects">Projetos</a>
+                <a href="../index.html#contact">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="project-detail-hero">
+            <div class="project-detail-container fade-in">
+                <a href="../index.html#projects" class="back-link">← Voltar aos Projetos</a>
+                <div class="project-badge">Web / Backend</div>
+                <h1 class="project-detail-title">Go Opportunities</h1>
+                <p class="project-detail-subtitle">API REST de vagas de emprego construída em Go — aprendizado de backend moderno</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-container slide-up">
+                <div class="detail-grid">
+                    <!-- Sobre o Projeto -->
+                    <div class="detail-card detail-card-wide">
+                        <div class="detail-card-header">
+                            <span class="detail-icon">📖</span>
+                            <h2>Sobre o Projeto</h2>
+                        </div>
+                        <p>Este projeto é uma <strong>API REST</strong> completa para gerenciamento de vagas de emprego, desenvolvida inteiramente em <strong>Go (Golang)</strong>. Foi criado como projeto de estudo para aprender os fundamentos e boas práticas de desenvolvimento backend com Go.</p>
+                        <p>A API permite realizar operações <strong>CRUD</strong> (Create, Read, Update, Delete) em vagas de emprego, com persistência em banco de dados SQLite e documentação automática via Swagger.</p>
+                    </div>
+
+                    <!-- Funcionalidades -->
+                    <div class="detail-card">
+                        <div class="detail-card-header">
+                            <span class="detail-icon">🎯</span>
+                            <h2>Funcionalidades</h2>
+                        </div>
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <span class="feature-check">✅</span>
+                                <span>Criar novas vagas de emprego</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-check">✅</span>
+                                <span>Listar todas as vagas disponíveis</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-check">✅</span>
+                                <span>Buscar vaga específica por ID</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-check">✅</span>
+                                <span>Atualizar informações de uma vaga</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-check">✅</span>
+                                <span>Deletar vagas existentes</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-check">✅</span>
+                                <span>Documentação interativa via Swagger</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Endpoints da API -->
+                    <div class="detail-card">
+                        <div class="detail-card-header">
+                            <span class="detail-icon">🔌</span>
+                            <h2>Endpoints da API</h2>
+                        </div>
+                        <div class="api-endpoints">
+                            <div class="endpoint">
+                                <span class="method method-post">POST</span>
+                                <code>/api/v1/opening</code>
+                                <span class="endpoint-desc">Criar vaga</span>
+                            </div>
+                            <div class="endpoint">
+                                <span class="method method-get">GET</span>
+                                <code>/api/v1/opening</code>
+                                <span class="endpoint-desc">Buscar vaga</span>
+                            </div>
+                            <div class="endpoint">
+                                <span class="method method-get">GET</span>
+                                <code>/api/v1/openings</code>
+                                <span class="endpoint-desc">Listar vagas</span>
+                            </div>
+                            <div class="endpoint">
+                                <span class="method method-put">PUT</span>
+                                <code>/api/v1/opening</code>
+                                <span class="endpoint-desc">Atualizar vaga</span>
+                            </div>
+                            <div class="endpoint">
+                                <span class="method method-delete">DELETE</span>
+                                <code>/api/v1/opening</code>
+                                <span class="endpoint-desc">Deletar vaga</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tecnologias -->
+                    <div class="detail-card">
+                        <div class="detail-card-header">
+                            <span class="detail-icon">🛠️</span>
+                            <h2>Tecnologias Utilizadas</h2>
+                        </div>
+                        <div class="tech-list">
+                            <div class="tech-item">
+                                <span class="tech-name">Go (Golang)</span>
+                                <span class="tech-desc">Linguagem principal de alto desempenho</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name">Gin</span>
+                                <span class="tech-desc">Framework HTTP web minimalista e rápido</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name">GORM</span>
+                                <span class="tech-desc">ORM para Go — acesso simplificado ao banco</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name">SQLite</span>
+                                <span class="tech-desc">Banco de dados leve e embutido</span>
+                            </div>
+                            <div class="tech-item">
+                                <span class="tech-name">Swagger</span>
+                                <span class="tech-desc">Documentação interativa automática da API</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Estrutura -->
+                    <div class="detail-card">
+                        <div class="detail-card-header">
+                            <span class="detail-icon">📁</span>
+                            <h2>Estrutura do Projeto</h2>
+                        </div>
+                        <div class="code-structure">
+                            <pre><code>📦 aprender_go_opportunites/
+├── 📁 config/        → Configurações do banco e app
+├── 📁 handler/       → Handlers HTTP (controllers)
+│   ├── createOpening.go
+│   ├── deleteOpening.go
+│   ├── listOpenings.go
+│   ├── showOpening.go
+│   └── updateOpening.go
+├── 📁 router/        → Definição de rotas da API
+├── 📁 schemas/       → Structs e modelos de dados
+├── 📄 main.go        → Ponto de entrada da aplicação
+├── 📄 go.mod         → Dependências do projeto
+└── 📄 go.sum         → Lock file de dependências</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- Aprendizados -->
+                    <div class="detail-card">
+                        <div class="detail-card-header">
+                            <span class="detail-icon">🎓</span>
+                            <h2>Aprendizados</h2>
+                        </div>
+                        <div class="flow-steps">
+                            <div class="flow-step">
+                                <span class="flow-number">1</span>
+                                <div>
+                                    <strong>Arquitetura Clean</strong>
+                                    <p>Separação em camadas: config, handler, router, schemas</p>
+                                </div>
+                            </div>
+                            <div class="flow-step">
+                                <span class="flow-number">2</span>
+                                <div>
+                                    <strong>API RESTful</strong>
+                                    <p>Design de endpoints seguindo padrões REST com versionamento</p>
+                                </div>
+                            </div>
+                            <div class="flow-step">
+                                <span class="flow-number">3</span>
+                                <div>
+                                    <strong>ORM com GORM</strong>
+                                    <p>Mapeamento objeto-relacional simplificado em Go</p>
+                                </div>
+                            </div>
+                            <div class="flow-step">
+                                <span class="flow-number">4</span>
+                                <div>
+                                    <strong>Documentação com Swagger</strong>
+                                    <p>Geração automática de docs interativos para a API</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="detail-card detail-card-wide detail-cta">
+                        <h2>Quer ver o código completo?</h2>
+                        <p>Acesse o repositório no GitHub para explorar todo o código-fonte, handlers e configurações da API.</p>
+                        <div class="detail-actions">
+                            <a href="https://github.com/maycom306/aprender_go_opportunites" target="_blank" class="btn btn-primary">Ver no GitHub</a>
+                            <a href="../index.html#projects" class="btn btn-secondary">Outros Projetos</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Michael Cachina. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="../main.js"></script>
+</body>
+</html>
